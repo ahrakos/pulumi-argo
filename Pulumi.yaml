@@ -1,0 +1,3 @@
+name: pulumi-argo
+runtime: nodejs
+description: poc on pulumi operator and argo cd

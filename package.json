@@ -1,0 +1,12 @@
+{
+    "name": "pulumi-argo",
+    "main": "index.ts",
+    "devDependencies": {
+        "@types/node": "^18"
+    },
+    "dependencies": {
+        "@pulumi/aws": "^6.17.0",
+        "@pulumi/kubernetes": "^4.5.6",
+        "@pulumi/pulumi": "^3.100.0"
+    }
+}
