@@ -4,7 +4,7 @@ import * as k8s from '@pulumi/kubernetes';
 
 // Create an AWS S3 Bucket
 const s3Bucket = new aws.s3.Bucket("myBucket", {
-    bucket: "my-omrikey-bucket",
+    bucket: "my-pulumi-argo-bucket",
 });
 
 // Define app labels for Kubernetes Deployment

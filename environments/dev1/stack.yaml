@@ -1,0 +1,24 @@
+apiVersion: pulumi.com/v1
+kind: Stack
+metadata:
+  namespace: default
+  name: uriah-app
+spec:
+  # envRefs:
+  #   PULUMI_ACCESS_TOKEN:
+  #     type: secret
+  #     secret:
+  #       name: pulumi
+  #       key: pulumiToken
+  destroyOnFinalize: true
+  backend: s3://pulumi-argo
+  projectRepo: https://github.com/ahrakos/pulumi-argo.git
+  branch: refs/heads/main
+  gitAuth:
+    accessToken:
+      type: secret
+      secret:
+        name: pulumi
+        key: GITHUB_TOKEN
+  config:
+    IMAGE_TAG: asdasdasd
