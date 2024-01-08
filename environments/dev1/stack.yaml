@@ -1,12 +1,13 @@
 apiVersion: pulumi.com/v1
 kind: Stack
 metadata:
-  name: uriah-app
+  name: dev1
 spec:
-  stack: uriah-app
+  stack: dev1
   destroyOnFinalize: true
   backend: s3://pulumi-argo
   projectRepo: https://github.com/ahrakos/pulumi-argo
+  repoDir: ./environments/dev1
   branch: refs/heads/main
   gitAuth:
     accessToken:

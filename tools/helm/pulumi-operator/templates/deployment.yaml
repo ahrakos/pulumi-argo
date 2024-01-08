@@ -44,7 +44,7 @@ spec:
         {{- toYaml .Values.extraEnv  | nindent 8 }}
         {{- end }}
         - name: WATCH_NAMESPACE
-          value: ""
+        - name: PULUMI_CONFIG_PASSPHRASE
         - name: INSECURE_NO_NAMESPACE_ISOLATION
           value: "true"
         - name: POD_NAME
