@@ -1,0 +1,1 @@
+helm upgrade --install --namespace kube-system --set serviceAccount.annotations."eks\.amazonaws\.com\/role-arn"="arn:aws:iam::746419327481:role/pulumi-operator" pulumi-operator ./tools/pulumi-operator

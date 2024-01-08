@@ -1,4 +1,0 @@
-name: dev1
-runtime: nodejs
-description: poc on pulumi operator and argo cd
-main: ../../projects/psr

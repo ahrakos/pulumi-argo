@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: example-applicationset
+spec:
+  generators:
+    - git:
+        repoURL: 'https://github.com/ahrakos/pulumi-argo.git'
+        revision: HEAD
+        directories:
+          - path: environments/*
+  template:
+    metadata:
+      name: '{{path.basename}}'
+    spec:
+      project: default
+      source:
+        repoURL: 'https://github.com/ahrakos/pulumi-argo.git'
+        path: '{{path}}'
+        targetRevision: HEAD
+      destination:
+        server: 'https://kubernetes.default.svc'
+        namespace: default

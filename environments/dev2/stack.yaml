@@ -1,9 +1,9 @@
 apiVersion: pulumi.com/v1
 kind: Stack
 metadata:
-  name: dev1
+  name: dev2
 spec:
-  stack: dev1
+  stack: dev2
   destroyOnFinalize: true
   backend: s3://pulumi-argo
   projectRepo: https://github.com/ahrakos/pulumi-argo
@@ -17,4 +17,4 @@ spec:
         key: GITHUB_TOKEN
   config:
     'aws:region': us-east-2
-    envName: dev1
+    envName: dev2
