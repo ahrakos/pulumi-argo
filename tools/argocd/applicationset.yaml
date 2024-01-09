@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: example-applicationset
+  name: environments
 spec:
   generators:
     - git:
@@ -12,6 +12,7 @@ spec:
   template:
     metadata:
       name: '{{path.basename}}'
+      namespace: default
     spec:
       project: default
       source:
@@ -21,3 +22,7 @@ spec:
       destination:
         server: 'https://kubernetes.default.svc'
         namespace: default
+      syncPolicy:
+        automated:
+          selfHeal: true
+          prune: true
